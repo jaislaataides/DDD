@@ -6,6 +6,7 @@ class Customer {
   private _email: string;
   private _active: boolean = false;
   private _address!: Address;
+  private _rewardPoints: number = 0;
 
   constructor(id: string, name: string, email: string) {
     this._id = id;
@@ -36,12 +37,24 @@ class Customer {
     this._address = address;
   }
 
+  addRewardPoints(points: number) {
+    this._rewardPoints += points;
+  }
+
+  get rewardPoints(): number {
+    return this._rewardPoints;
+  }
+
   get name(): string {
     return this._name;
   }
 
   get email(): string {
     return this._email;
+  }
+
+  get id(): string {
+    return this._id;
   }
 
   changeEmail(email: string) {

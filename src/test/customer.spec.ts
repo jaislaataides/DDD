@@ -52,4 +52,13 @@ describe("Customer unit tests", () => {
     customer.changeEmail("jane.doe@example.com");
     expect(customer.email).toBe("jane.doe@example.com");
   });
+
+  it("should add reward points", () => {
+    const customer = new Customer("1", "John Doe", "john.doe@example.com");
+    expect(customer.rewardPoints).toBe(0);
+    customer.addRewardPoints(100);
+    expect(customer.rewardPoints).toBe(100);
+    customer.addRewardPoints(100);
+    expect(customer.rewardPoints).toBe(200);
+  });
 });

@@ -11,6 +11,20 @@ export default class Order {
     this._customerId = customerId;
     this._items = items;
     this._total = this.calculateTotal();
+
+    this.validate();
+  }
+
+  validate(): void {
+    if (this._id.length === 0) {
+      throw new Error("Id is required");
+    }
+    if (this._customerId.length === 0) {
+      throw new Error("Customer id is required");
+    }
+    if (this._items.length === 0) {
+      throw new Error("Items are required");
+    }
   }
 
   calculateTotal(): number {

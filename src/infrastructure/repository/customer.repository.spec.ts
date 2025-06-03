@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize-typescript";
+import { IsEmail, Sequelize } from "sequelize-typescript";
 import CustomerRepository from "./customer.repository";
 import CustomerModel from "../db/sequelize/model/customer.model";
 import Customer from "../../domain/entities/customer";
@@ -35,11 +35,12 @@ describe("Customer repository test", () => {
     expect(customerModel?.toJSON()).toStrictEqual({
       id: "123",
       name: customer.name,
+      email: customer.email,
       active: customer.isActive(),
       rewardPoints: customer.rewardPoints,
       street: address.street,
       number: address.number,
-      zipcode: address.zip,
+      zip: address.zip,
       city: address.city,
     });
   });
@@ -58,11 +59,12 @@ describe("Customer repository test", () => {
     expect(customerModel?.toJSON()).toStrictEqual({
       id: "123",
       name: customer.name,
+      email: customer.email,
       active: customer.isActive(),
       rewardPoints: customer.rewardPoints,
       street: address.street,
       number: address.number,
-      zipcode: address.zip,
+      zip: address.zip,
       city: address.city,
     });
   });

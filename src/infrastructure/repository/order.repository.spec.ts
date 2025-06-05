@@ -8,7 +8,7 @@ import OrderItemModel from "../db/sequelize/model/order-item.model";
 import ProductModel from "../db/sequelize/model/product.model";
 import Order from "../../domain/entities/order";
 import OrderItem from "../../domain/entities/order-item";
-import Product from "../../domain/entities/product";
+import Product from "../../domain/product/entity/product";
 import ProductRepository from "./product.repository";
 import OrderRepository from "./order.repository";
 

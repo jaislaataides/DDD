@@ -1,7 +1,7 @@
 import Customer from "../../entities/customer";
 import Order from "../../entities/order";
 import OrderItem from "../../entities/order-item";
-import OrderService from "../order.service";
+import OrderService from "../../service/order.service";
 
 describe('OrderService', () => {
   it('should get total of all orders', () => {

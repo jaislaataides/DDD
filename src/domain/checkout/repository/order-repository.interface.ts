@@ -1,4 +1,4 @@
-import Order from "../entities/order";
+import Order from "../entity/order";
 
 export default interface OrderRepositoryInterface {
     create(entity: Order): Promise<void>;

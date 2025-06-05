@@ -1,5 +1,5 @@
-import Customer from "../../entities/customer";
-import RepositoryInterface from "../../repository/repository-interface.interface";
+import RepositoryInterface from "../../@shared/repository/repository-interface.interface";
+import Customer from "../entity/customer";
 
 
 export default interface CustomerRepositoryInterface extends RepositoryInterface<Customer> {}
